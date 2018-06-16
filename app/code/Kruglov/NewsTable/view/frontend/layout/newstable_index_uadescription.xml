@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="sidebar.additional">
+            <block before="catalog.compare.sidebar" class="Kruglov\NewsTable\Block\UADescription" name="news_table_ua_desc" template="Kruglov_NewsTable::buttonDescription.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="content">
+                <block class="Kruglov\NewsTable\Block\UADescription" name="kruglov_main_page_ua_description" template="Kruglov_NewsTable::uaDescription.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

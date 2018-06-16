@@ -1,0 +1,28 @@
+<?php
+/** @var $block \Kruglov\NewsTable\Block\MainTable */
+?>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-yw4l{vertical-align:top; width: 50%;}
+.th-header{background-color: #4a8d94; font-weight: bold};
+</style>
+<h2>Exchange rate to UA </h2>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l th-header">Currency</th>
+    <th class="tg-yw4l th-header">Description</th>
+    <th class="tg-yw4l th-header">Exchange rate</th>
+      <th class="tg-yw4l th-header">Image</th>
+  </tr>
+  <?php foreach ($block->getList()->getItems() as $item) :?>
+    <tr>
+        <td class="tg-yw4l"><a href="<?php echo $item->getTitle() ?>Description"><?php echo $item->getTitle() ?></a></td>
+        <td class="tg-yw4l"><?php echo $item->getDescription() ?></td>
+        <td class="tg-yw4l"><?php echo $item->getRate() ?></td>
+        <td class="tg-yw4l"><?php echo $item->getImage() ?></td>
+    </tr>
+  <?php endforeach;?>
+</table>
+

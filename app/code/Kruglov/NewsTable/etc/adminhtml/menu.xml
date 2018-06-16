@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Kruglov_NewsTable::news"
+             title="News"
+             translate="title"
+             module="Kruglov_NewsTable"
+             sortOrder="30"
+             parent="Magento_Backend::marketing_communications"
+             action="admin_kruglov/table"
+             resource="Kruglov_NewsTable::general_config" />
+    </menu>
+</config>

@@ -1,0 +1,59 @@
+<?php
+/** @var $block \Smile\Contact\Block\ContactForm */
+?>
+<div class="page-title-wrapper">
+    <h1 class="page-title">
+        <span class="base" data-ui-id="page-title-wrapper">Contact Us</span>
+    </h1>
+</div>
+<form class="form form-orders-search"
+      data-mage-init='{"validation":{}}'
+      action="<?= $block->getActionUrl() ?>"
+      method="post"
+      name="guest_post">
+    <fieldset class="fieldset">
+        <br>
+        <div class="field name required">
+            <label class="label" for="name"><span><?=  $block->escapeHtml(__('Your Name')) ?></span></label>
+
+            <div class="control">
+                <input type="text" class="input-text" id="name" name="name" title="<?= $block->escapeHtmlAttr(__('Name')) ?>"
+                       value=""
+                       data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="title"><span><?=  $block->escapeHtml(__('Title')) ?></span></label>
+
+            <div class="control">
+                <input type="text" class="input-text" id="title" name="title" title="<?= $block->escapeHtmlAttr(__('Title')) ?>"
+                       value=""
+                       data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email"><span><?=  $block->escapeHtml(__('Your Email')) ?></span></label>
+
+            <div class="control">
+                <input type="text" class="input-text" id="email" name="email"
+                       value=""
+                       data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+        <div class="field required">
+            <label class="label" for="question"><span><?= $block->escapeHtml(__('Your Question')) ?></span></label>
+            <div class="control">
+                <textarea name="question" id="question" title="<?= $block->escapeHtml(__('Your Question')) ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}">
+
+                </textarea>
+            </div>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="<?=  $block->escapeHtml(__('Submit')) ?>" class="action submit primary">
+                <span><?=  $block->escapeHtml(__('Submit')) ?></span>
+            </button>
+        </div>
+    </div>
+</form>

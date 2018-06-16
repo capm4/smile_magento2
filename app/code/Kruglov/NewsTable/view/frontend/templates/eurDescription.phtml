@@ -1,0 +1,15 @@
+<?php
+/** @var $block \Kruglov\NewsTable\Block\EURDescription */
+?>
+<div style="width: 100%">
+    <div style="width: 49%; display:inline-block">
+        <img src='<?php echo $this->getViewFileUrl('Kruglov_NewsTable::images/eur.jpeg'); ?>' alt="euro-image">
+    </div>
+    <div style="width: 50%; display:inline-block">
+        <h3>
+            <?php
+                 echo $block->geText();
+            ?>
+        </h3>
+    </div>
+</div>
